@@ -1,0 +1,4 @@
+New (Alt+Shift+N) > Dinamic Web Project
+	New Server Runtime Environment >
+		Apache Tomcat v7.0 > Next > [Browse ou Download and Instal] > Finish
+	Next > Next > Generate web.xml deployment descriptor > Finish

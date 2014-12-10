@@ -1,0 +1,169 @@
+/* CASCADING STYLE SHEET
+ * REGRA CSS: seletor {propriedade: "valor";}
+ * Preferencialmente PROPRIEDADE ABREVIADA
+ */
+
+/* SELETOR TIPO: body, a, span, h1, h2, h3, h4, h5, h6, div, p */
+/* SELETOR ID: id="identificador" */
+#identificador {}
+/* SELETOR CLASSE: class="classe" */
+.classe{}
+/* SELETOR UNIVERSAL '*' */
+* {
+	/* ABSOLUTO: px, em, ex | RELATIVO: in, cm, mm, pt, pc | PORCENTAGEM: %, 0 */
+	margin: 0 auto;/* CENTRALIZAR */
+	/* margin: 0;
+	 *
+	 * margin: 0em 0em 0em 0em;
+	 *
+	 * margin-top: 0em;
+	 * margin-right: 0em;
+	 * margin-bottom: 0em;
+	 * margin-left: 0em;
+	 */
+	padding: 0em;
+	/* padding: 0em 0em 0em 0em;
+	 *
+	 * padding-top: 0em;
+	 * padding-right: 0em;
+	 * padding-bottom: 0em;
+	 * padding-left: 0em;
+	 */
+}
+/* ex.: body:focus:hover {} */
+body:link {}
+body:hover {}
+body:focus {}
+body:active {}
+body:visited {}
+body::before {}
+body::after {}
+body:first-letter {}
+body:first-line {}
+body:first-child {}
+body:nth-child(even) {}/* PAR */
+body:nth-child(odd) {}/* IMPAR */
+/* PLACEHOLDER: input, textarea */
+input::-webkit-input-placeholder {}
+input::-moz-placeholder {} /* FIREFOX 19+ */
+input:-ms-input-placeholder {} /* IE */
+
+/* TABELAS: table, caption, thead, tbody, tfoot */
+table, dl, ol, ul {/*LISTA*/
+	list-style: none;
+	/* list-style: square inside none;
+	 * 
+	 * list-style-type: square;
+	 * list-style-image: ;
+	 * list-style-position: ;
+	*/
+}
+th, dt {/*TÍTULO*/}
+tr {/*CABEÇALHO*/}
+td, dd, li {/*ITEM*/}
+
+body {
+	transform: rotate(-5deg);/* -ESQ+DIR */
+	transform: scale(1.3);/* TRINTA POR CENTO MAIOR */
+	transform: skew(10deg, 10deg);
+	transform: translateY(10em);/*+CIMA-BAIXO*/
+	transform: translateX(10em);/* ESQ+DIR */
+}
+body h1 {}/* PAI E FILHO */
+body > h1 {}/* PAI E FILHO ADJACENTE */
+h1 + h1 {}/* IRMÃO ADJACENTE */
+h1[atributo] {}/* QUE POSSUA O ATRIBUTO atributo */
+h1[atributo~=valor] {}/* UM DOS VALORES DO ATRIBUTO atributo SEJA valor, ex.: h1[class~=divisao] */
+
+body {
+	border: 1em none #000;
+	/* border: width style color;
+	 *
+	 * border-top: width style color;
+	 * border-right: width style color;
+	 * border-bottom: width style color;
+	 * border-left: width style color;
+	 */
+	
+	/* border-width: 10em;
+	 * thin, medium, thick
+	 * ABSOLUTO: em, px, ex | RELATIVO: in, cm, mm, pt, pc | PORCENTAGEM: %, 0 
+	 *
+	 * 2 VALORES superior/inferior direita/esquerda ;
+	 * 3 VALORES superior direita/esquerda inferior;
+	 * 4 VALORES superior direita inferior esquerda ;
+	 *
+	 * border-top-width: 10em;
+	 * border-right-width: 10em;
+	 * border-bottom-width: 10em;
+	 * border-left-width: 10em;
+	 */
+	
+	/* border-style: none ;
+	 * none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset
+	 *
+	 * border-top-style: none;
+	 * border-right-style: none;
+	 * border-bottom-style: none;
+	 * border-left-style: none;
+	 */
+	
+	/* border-color: #000;
+	 * nome, #RRGGBB, #RGB, rgb(R,G,B), rgb(R%,G%,B%), rgba(255, 255, 255, 0.3)
+	 *
+	 * border-top-color: red;
+	 * border-right-color: red;
+	 * border-bottom-color: red;
+	 * border-left-color: red;
+	*/
+	
+	width: 20em;/* ABSOLUTO: em, px, ex | RELATIVO: in, cm, mm, pt, pc | PORCENTAGEM: %, 0 */
+	height: 50em;/* ABSOLUTO: em, px, ex | RELATIVO: in, cm, mm, pt, pc | PORCENTAGEM: %, 0 */
+	
+	display: inline;/*block(CONTAINERS: div, p, section), inline(a, span, small), inline-block(inline+block), table-cell(th, thead, tr), table-row, none(SOME TUDO) */
+	
+	position: absolute;/* static(não pode ser posicionados), relative, absolute(filho de acordo com 1º pai não static) e fixed(fixo independente da rolagem), static & absolute: FORA DO FLUXO */
+		left: 20em; /* left, right, top, bottom */
+	z-index: 1;/* NÚMERO DA CAMADA */
+	float:left;/* left, right, none; INICIA UM FLUXO DE ALINHAMENTO */
+	clear: both;/* QUEBRA O FLUXO DE ALINHAMENTO: left, right, both, none */
+	
+	cursor: auto;/* auto, crosshair(Para precisão; posicionamento), default(Padrão do sistema), pointer(Objeto clicável), move(Objeto móvel), text(Selecionar ou editar um texto), wait(Icone de espera ou carregamento), help(Ajuda), e-resize(Direita), ne-resize(Diagonal cima-direita), n-resize(Cima), nw-resize(Diagonal cima-esquerda), w-resize(Esquerda), sw-resize(Diagonal baixo-esquerda), s-resize(Baixo), se-resize(Diagonal baixo-direita) */
+	
+	font: italic normal bold 3em/100% arial;
+	/* font: caption|icon|menu|message-box|small-caption|status-bar|initial|inherit;
+	 *
+	 * font-style: italic;
+	 * font-variant: small-caps; small-caps, normal
+	 * font-weight: bold;
+	 * font-size: 30px; xx-small, x-small, small, medium, large, x-large, xx-large
+	 * line-height: 100%;
+	 * font-family: arial, verdana, sans-serif;
+	 */
+	
+	direction: ltr;/*ltr, rtl*/
+	white-space: normal;/*normal, pre, nowrap*/
+	word-spacing: 0.3em;/* ABSOLUTO: em, px, ex | RELATIVO: in, cm, mm, pt, pc | PORCENTAGEM: %, 0 */
+	letter-spacing: 0.3em;/* ABSOLUTO: em, px, ex | RELATIVO: in, cm, mm, pt, pc | PORCENTAGEM: %, 0 */
+	text-indent: 30px;/* RECUO DA PRIMEIRA LINHA, PODE SER NEGATIVO */
+	vertical-align: baseline;/*baseline, middle, sub, super, text-top, text-bottom; ALINHAMENTO NA LINHA*/
+	text-shadow: none;
+	/*
+	 * '+CIMA-BAIXO' '+ESQ-DIR' 'DENSIDADE(blur)' 'COR=color|none|initial|inherit'
+	 * MAIS DE UMA SOMBRA: SEPARADAS POR VÍRGULA
+	 * BRILHO: 0 0, INTERNO: inset
+	 */
+	text-align: left;/* left, right, center, justify */
+	text-decoration: underline;/* none(retira o sublinhado de links), underline, overline, line-through */
+	text-transform: capitalize;/* capitalize, uppercase, lowercase */
+	color:red;/* nome, #RRGGBB, #RGB, rgb(R,G,B), rgb(R%,G%,B%), rgba(255, 255, 255, 0.3) */
+	
+	background: #000 none no-repeat fixed top right;
+	/*
+	 * background-color: #FFCC66; nome, #RRGGBB, #RGB, rgb(R,G,B), rgb(R%,G%,B%), rgba(255, 255, 255, 0.3)
+	 * background-image: url("image/box model 1.gif"); url('#'), linear-gradient(to top right, #000000  30%, #FFFFFF 70%)
+	 * background-repeat: no-repeat; no-repeat, repeat, repeat-x, repeat-y
+	 * background-attachment: fixed; scroll, fixed
+	 * background-position: right bottom; left bottom, right bottom, top right, right top
+	 */
+}
